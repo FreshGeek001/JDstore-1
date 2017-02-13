@@ -71,11 +71,11 @@
 
 .dad {
   height: 600px;
-  width: 100%;
+  width: 105%;
   overflow: hidden;
   position: relative;
   padding: 0;
-  margin: 0 -15px 20px;
+  margin: 0 -15px;
 }
 
 .dad > .son-1 {
@@ -125,4 +125,35 @@
   padding: 15px 45px;
   font-family: 'Josefin Slab', serif;
   font-style: italic;
+}
+
+.searchform{
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  text-align: left;
+}
+
+.searchbox{
+  float: left;
+  width: 100px;
+  height: 38px;
+  padding: 9px 7px;
+  font: 16px arial;
+  border: 1px solid #b8b8b8;
+}
+
+.searchbotton {
+    float: auto;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #60af00;
+    width: 100px;
+    height: 38px;
+    border: 1px solid #5d9b4d;
+    font-size: 14px;
+    font-family: simsun;
 }
