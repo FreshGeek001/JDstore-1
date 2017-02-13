@@ -1,14 +1,24 @@
+<div class="container dad">
+  <div class="son-1"></div>
+  <p class="son-text">
+    <span class="son-span">Explore the world
+      <i class="fa fa-bicycle" aria-hidden="true"></i>
+      By Bike</span>
+  </p>
+</div>
 <div class="row">
   <% @products.each do |product|%>
   <div class="col-xs-6 col-md-3">
     <%= link_to product_path(product) do %>
     <% if product.image.present? %>
     <%= image_tag(product.image.thumb.url, class:"thumbnail") %>
-    <% else %>
+  <% else %>
     <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail")%>
     <% end %>
     <% end %>
-    <%= product.title %> ¥ <%= product.price %>
+    <%= product.title %>
+    ¥
+    <%= product.price %>
   </div>
   <% end %>
-  </div>
+</div>
