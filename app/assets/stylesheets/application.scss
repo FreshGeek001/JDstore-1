@@ -71,7 +71,7 @@
 
 .dad {
   height: 600px;
-  width: 100%;
+  width: 105%;
   overflow: hidden;
   position: relative;
   padding: 0;
@@ -125,4 +125,14 @@
   padding: 15px 45px;
   font-family: 'Josefin Slab', serif;
   font-style: italic;
+}
+
+#item {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  margin-bottom: 5px;
 }
