@@ -6,19 +6,81 @@
       By Bike</span>
   </p>
 </div>
-<div class="row">
-  <% @products.each do |product|%>
-  <div class="col-xs-6 col-md-3">
-    <%= link_to product_path(product) do %>
-    <% if product.image.present? %>
-    <%= image_tag(product.image.thumb.url, class:"thumbnail") %>
-  <% else %>
-    <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail")%>
-    <% end %>
-    <% end %>
-    <%= product.title %>
-    ¥
-    <%= product.price %>
+
+<!-- <div class="row">
+  <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
+      <% end %>
+      <%= product.title %> ￥<%= product.price %>
+    </div>
+  <% end %>
+</div> -->
+<div>
+  <%= form_tag products_path, :method => "get" do %>
+  <div class="searchform">
+    <%= text_field_tag :search, params[:search], placeholder: "搜索产品", class: "searchbox"%>
+    <span>
+      <%= submit_tag "搜索", :title => nil, :description => nil, :categories =>nil, class: "searchbutton" %>
+    </span>
   </div>
   <% end %>
 </div>
+<section>
+  <h2>Giant</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Giant")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
+
+<section>
+  <h2>Trek</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Trek")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
