@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :products do
     member do
       post :add_to_cart
+      get  :search
     end
   end
 
@@ -38,5 +39,7 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders
   end
+  
   root 'welcome#index'
+
 end
