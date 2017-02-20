@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.background {
+  background-color: #EEEEEE;
+}
+
+.navbar-default {
+  background-color: #EEEEEE; //背景颜色
+  border-color: #EEEEEE; //边框色
+  margin-bottom: 0; //底部 margin 不撑开距离
+}
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0; //圆角为0
+  }
+}
+
+.navbar-default .navbar-brand {
+  color: #212121; //字体颜色
+  padding: 10px 15px; //上下10px,左右15px
+  line-height: 30px; //文字行高
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+  color: #DD2C00; //鼠标放置在链接上的文字颜色
+  background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #212121;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FF6F00;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #FF6F00;
+  background-color: #FFE0B2;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: #FFE0B2;
+  color: #212121;
+}
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,600,100italic,300italic,400italic,600italic,700,700italic);
+
+.dad {
+  height: 600px;
+  width: 105%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0 -15px;
+}
+
+.dad > .son-1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -moz-transition: all 5s;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+  -moz-transform: scale(1,1);
+  -webkit-transform: scale(1,1);
+  transform: scale(1,1);
+  background-image: url("https://ww3.sinaimg.cn/large/006tNbRwgy1fcof196ys8j31kw11s4qq.jpg");
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+
+.dad:hover > .son-1 {
+  -moz-transform: scale(1.5,1.5);
+  -webkit-transform: scale(1.5,1.5);
+  transform: scale(1.5,1.5);
+}
+
+.son-text {
+  color: #fcfcfc;
+  font-size: 2em;
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding-top: 20vh;
+}
+
+.son-text:hover {
+  background-color: #22313F;
+  opacity: 0.7;
+}
+
+.son-span {
+  background: #fcfcfc;
+  color: #22313F;
+  padding: 15px 45px;
+  font-family: 'Josefin Slab', serif;
+  font-style: italic;
+}
+
+
+#item {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  margin-bottom: 5px;
+
+}
