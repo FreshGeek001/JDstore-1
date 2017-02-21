@@ -1,28 +1,50 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-    <%= image_tag(@product.image.medium.url, class:"thumbnail")%>
-  <% else %>
-    <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail")%>
-    <% end %>
+<div class="detail mt20 w1200 bc pb50">
 
-  </div>
-  <div class="col-md-6">
-    <h2><%= @product.title %>
-    </h2>
-    <div style="height: 100px;">
-      <p>
-        <%= @product.description %>
+  <div class="intro clearfix">
+    <div class="cover fl">
+      <div class="intro-bigPic border pr">
+        <div class="magnifier-preview border" id="preview"></div>
+        <% if @photos.present? %>
+        <a class="magnifier-thumb-wrapper" href="javascript:;">
+          <img id="thumb" src="<%= @photos.first.avatar.medium.url %>" data-large-img-wrapper="preview" data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+        </a>
+        <% end %>
+      </div>
+      <ul class="intro-preview clearfix">
+        <% if @photos.present? %>
+        <% @photos.each_with_index do |p, index| %>
+        <% if index == 0 %>
+        <li class="border intro-preview-item intro-preview-activeItem fl">
+        <% else %>
+        <li class="border intro-preview-item fl">
+          <% end %>
+          <% if index < 5 %>
+          <%= image_tag p.avatar.medium.url %>
+          <% end %>
+        </li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <div class="intro-text fr">
+      <h3 class="f20 ell fb"><%= @product.title %></h3>
+      <p class="intro-text-desc"><%= @product.description %></p>
+      <p class="intro-text-value bg-gray">
+        <span class="pl20 pr30">售价</span>
+        <span class="price f24 fb col-red">￥<%= @product.price %></span>
       </p>
-    </div>
-    <div>数量 ：<%= @product.quantity %></div>
-    <div class="product-price">
-      ¥
-      <%= @product.price %>
-    </div>
-    <div class="pull-right">
+      <p class="intro-text-service">
+        <span class="pl20 pr30">运费</span>
+        <span>包邮
+        </span>
+      </p>
+      <p class="intro-text-count">
+        <span class="pl20 pr30">库存</span><%= @product.quantity %>
+        <span></span>
+      </p>
+
       <% if @product.quantity.present? && @product.quantity > 0 %>
-      <%=link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "btn btn-danger btn-lg")%>
+      <%=link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red")%>
     <% else %>
       已销售一空，无法购买
       <% end %>

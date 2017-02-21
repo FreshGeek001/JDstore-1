@@ -32,3 +32,175 @@
   font-size: 14px;
   font-family: simsun;
 }
+//show
+
+.pb50 {
+  padding-bottom: 50px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.w1200 {
+  width: 1200px;
+}
+
+.bc {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.clearfix {
+  display: block;
+}
+
+.intro-bigPic {
+  width: 420px;
+  height: 420px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.intro-preview {
+  margin-top: 15px;
+  padding-left: 0;
+
+  .intro-preview-item {
+    padding: 1px;
+    margin-right: 13px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .intro-preview-activeItem {
+    border-color: #DB3652;
+  }
+}
+
+.fl {
+  float: left;
+  display: inline;
+}
+
+.border {
+  border: 1px solid #DDDDDD;
+}
+
+.intro-text {
+  width: 744px;
+
+  h3 {
+    margin-top: 0;
+    line-height: 30px;
+  }
+}
+
+.fr {
+  float: right;
+  display: inline;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.ell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+}
+
+.fb {
+  font-weight: bold;
+}
+
+.intro-text-desc {
+  margin-top: 7px;
+}
+
+.intro-text-value {
+  height: 60px;
+  line-height: 60px;
+}
+
+.bg-gray {
+  background: #F5F5F5;
+}
+
+.pr30 {
+  padding-right: 30px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.col-red {
+  color: #d32048;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.intro-text-service {
+  height: 50px;
+  line-height: 50px;
+}
+//按钮
+
+.intro-text-btn {
+  display: block;
+  width: 178px;
+  height: 48px;
+  line-height: 45px;
+  border: 1px solid #d32048;
+  font-family: "Microsoft Yahei",simhei;
+  border-radius: 50px;
+
+  &.add-cart {
+    color: #fff;
+  }
+}
+
+.col-red {
+  color: #d32048;
+}
+
+.bg-red {
+  background: #D32048;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.f20 {
+  font-size: 20px;
+}
+//show
