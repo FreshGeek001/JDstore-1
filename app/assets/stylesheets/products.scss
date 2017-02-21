@@ -32,7 +32,7 @@
   font-size: 14px;
   font-family: simsun;
 }
-//show
+//show product
 
 .pb50 {
   padding-bottom: 50px;
@@ -203,4 +203,103 @@
 .f20 {
   font-size: 20px;
 }
-//show
+//show porduct
+//show comment
+
+.border {
+  border: 1px solid #DDDDDD;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.productDetail-tabList {
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.bg-gray {
+  background: #F5F5F5;
+}
+
+.clearfix {
+  display: block;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.productDetail-tabList-tab {
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  border-right: 1px solid #D8D8D8;
+}
+
+.pr50 {
+  padding-right: 50px;
+}
+
+.pl50 {
+  padding-left: 50px;
+}
+
+.fl {
+  float: left;
+  display: inline;
+}
+
+.productDetail-tabList-activeTab {
+  background: #fff;
+}
+
+.productDetail-content {
+  display: none;
+}
+
+.productDetail-content .productDetail-introImg img {
+  width: 700px;
+}
+
+.commentList-item {
+  width: 665px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.commentList-item .content {
+  width: 400px;
+}
+
+.commentList-item .name {
+  width: 180px;
+}
+
+.comment-say a {
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.g-btn {
+  display: block;
+  width: 178px;
+  height: 48px;
+  line-height: 45px;
+  border: 1px solid #d32048;
+  font-family: "Microsoft Yahei",simhei;
+  border-radius: 50px;
+  color: #fff;
+}
+//show comment

@@ -51,3 +51,35 @@
     </div>
   </div>
 </div>
+
+<div class="productDetail border mt40">
+  <ul class="productDetail-tabList bg-gray clearfix">
+    <li class="productDetail-tabList-tab productDetail-tabList-activeTab fl pl50 pr50">
+      商品详情
+    </li>
+    <li class="productDetail-tabList-tab fl pl50 pr50">
+      商品评价(<%= @product.posts.count%>)
+    </li>
+  </ul>
+
+  <div class="productDetail-contentWrap">
+    <div class="productDetail-content pt20 tc pb20" style="display: block;">
+      <p class="mt20 mb20"><%= @product.description %></p>
+    </div>
+    <div class="productDetail-content pt30 tc pb20">
+      <ul class="commentList mt70">
+        <% @posts.each do |post| %>
+        <li class="commentList-item w700 pt10 pb10 bc clearfix">
+          <p class="fl content tl f12"><%= post.content %></p>
+          <p class="fr name ell">
+            <%= post.user.email %>
+          </p>
+        </li>
+        <% end %>
+      </ul>
+      <p class="comment-say mt20 mb20">
+        <%= link_to("我来说两句", new_product_post_path(@product),
+             :class => "g-btn pl15 pr15 mt20 ml20 tc col-red f20 bg-red bc") %>
+      </p>
+    </div>
+  </div>
