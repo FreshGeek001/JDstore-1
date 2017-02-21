@@ -6,7 +6,7 @@
 
         <% if @photos.present? %>
 
-        <img id="thumb" src="<%= @photos.first.avatar.medium.url %>">
+        <img id="zoom_01" src="<%= @photos.first.avatar.medium.url %>" data-zoom-image="<%= @photos.first.avatar.medium.url %>">
 
         <% end %>
       </div>
@@ -51,3 +51,7 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('#zoom_01').elevateZoom();
+</script>
