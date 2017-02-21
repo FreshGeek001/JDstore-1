@@ -3,11 +3,11 @@
   <div class="intro clearfix">
     <div class="cover fl">
       <div class="intro-bigPic border pr">
-        <div class="magnifier-preview border" id="preview"></div>
+
         <% if @photos.present? %>
-        <a class="magnifier-thumb-wrapper" href="javascript:;">
-          <img id="thumb" src="<%= @photos.first.avatar.medium.url %>" data-large-img-wrapper="preview" data-large-img-url="<%= @photos.first.avatar.medium.url %>">
-        </a>
+
+        <img id="thumb" src="<%= @photos.first.avatar.medium.url %>">
+
         <% end %>
       </div>
       <ul class="intro-preview clearfix">
