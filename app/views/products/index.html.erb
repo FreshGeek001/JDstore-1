@@ -1,56 +1,56 @@
 <div class="container dad">
 
-<div>
-  <%= form_tag products_path, :method => "get" do %>
-  <div class="searchform">
-    <%= text_field_tag :search, params[:search], placeholder: "搜索产品", class: "searchbox"%>
-    <span>
-      <%= submit_tag "搜索", :title => nil, :description => nil, :categories =>nil, class: "searchbutton" %>
-    </span>
-  </div>
-  <% end %>
-</div>
-<div class="container">
-  <ul class="nav nav-tabs" style="margin:20px;">
-    <li class="active">
-      <a href="/products">Bikes</a>
-    </li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
-        <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li>
-          <a href="#">Submenu 1-1</a>
-        </li>
-        <li>
-          <a href="#">Submenu 1-2</a>
-        </li>
-        <li>
-          <a href="#">Submenu 1-3</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">Menu 2</a>
-    </li>
-    <li>
-      <a href="#">Menu 3</a>
-    </li>
-  </ul>
-</div>
-<div class="row">
-  <% @products.each do |product| %>
-  <div class="col-xs-6 col-md-3">
-    <%= link_to product_path(product) do %>
-    <% if product.image.present? %>
-    <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-  <% else %>
-    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+  <div>
+    <%= form_tag products_path, :method => "get" do %>
+    <div class="searchform">
+      <%= text_field_tag :search, params[:search], placeholder: "搜索产品", class: "searchbox"%>
+      <span>
+        <%= submit_tag "搜索", :title => nil, :description => nil, :categories =>nil, class: "searchbutton" %>
+      </span>
+    </div>
     <% end %>
-    <% end %>
-    <%= product.title %>
-    ￥<%= product.price %>
   </div>
-  <% end %>
-</div>
+  <div class="container">
+    <ul class="nav nav-tabs" style="margin:20px;">
+      <li class="active">
+        <a href="/products">Bikes</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Submenu 1-1</a>
+          </li>
+          <li>
+            <a href="#">Submenu 1-2</a>
+          </li>
+          <li>
+            <a href="#">Submenu 1-3</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Menu 2</a>
+      </li>
+      <li>
+        <a href="#">Menu 3</a>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to product_path(product) do %>
+      <% if product.photos.present? %>
+      <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+      <% end %>
+      <% end %>
+      <%= product.title %>
+      ￥<%= product.price %>
+    </div>
+    <% end %>
+  </div>

@@ -146,8 +146,8 @@
     <div class="col-xs-6 col-md-3">
       <div id="item">
         <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+        <% if product.photos.present? %>
+        <%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200") %>
       <% else %>
         <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
         <% end %>
@@ -173,8 +173,8 @@
     <div class="col-xs-6 col-md-3">
       <div id="item">
         <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+        <% if product.photos.present? %>
+        <%= image_tag(product.photos[0].avatar.thumb.url, size:"200x200") %>
       <% else %>
         <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
         <% end %>
@@ -200,8 +200,8 @@
     <div class="col-xs-6 col-md-3">
       <div id="item">
         <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+        <% if product.photos.present? %>
+        <%= image_tag(product.photos[0].avatar.thumb.url, size:"200x200") %>
       <% else %>
         <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
         <% end %>

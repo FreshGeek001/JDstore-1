@@ -1,31 +1,85 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-    <%= image_tag(@product.image.medium.url, class:"thumbnail")%>
-  <% else %>
-    <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail")%>
-    <% end %>
+<div class="detail mt20 w1200 bc pb50">
 
-  </div>
-  <div class="col-md-6">
-    <h2><%= @product.title %>
-    </h2>
-    <div style="height: 100px;">
-      <p>
-        <%= @product.description %>
+  <div class="intro clearfix">
+    <div class="cover fl">
+      <div class="intro-bigPic border pr">
+
+        <% if @photos.present? %>
+
+        <img id="thumb" src="<%= @photos.first.avatar.medium.url %>" data-large-img-wrapper="preview" data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+
+        <% end %>
+      </div>
+      <ul class="intro-preview clearfix">
+        <% if @photos.present? %>
+        <% @photos.each_with_index do |p, index| %>
+        <% if index == 0 %>
+        <li class="border intro-preview-item intro-preview-activeItem fl">
+        <% else %>
+        <li class="border intro-preview-item fl">
+          <% end %>
+          <% if index < 5 %>
+          <%= image_tag p.avatar.medium.url %>
+          <% end %>
+        </li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <div class="intro-text fr">
+      <h3 class="f20 ell fb"><%= @product.title %></h3>
+      <p class="intro-text-desc"><%= @product.description %></p>
+      <p class="intro-text-value bg-gray">
+        <span class="pl20 pr30">售价</span>
+        <span class="price f24 fb col-red">￥<%= @product.price %></span>
       </p>
-    </div>
-    <div>数量 ：<%= @product.quantity %></div>
-    <div class="product-price">
-      ¥
-      <%= @product.price %>
-    </div>
-    <div class="pull-right">
+      <p class="intro-text-service">
+        <span class="pl20 pr30">运费</span>
+        <span>包邮
+        </span>
+      </p>
+      <p class="intro-text-count">
+        <span class="pl20 pr30">库存</span><%= @product.quantity %>
+        <span></span>
+      </p>
+
       <% if @product.quantity.present? && @product.quantity > 0 %>
-      <%=link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "btn btn-danger btn-lg")%>
+      <%=link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red")%>
     <% else %>
       已销售一空，无法购买
       <% end %>
     </div>
   </div>
 </div>
+
+<div class="productDetail border mt40">
+  <ul class="productDetail-tabList bg-gray clearfix">
+    <li class="productDetail-tabList-tab productDetail-tabList-activeTab fl pl50 pr50">
+      商品详情
+    </li>
+    <li class="productDetail-tabList-tab fl pl50 pr50">
+      商品评价(<%= @product.posts.count%>)
+    </li>
+  </ul>
+
+  <div class="productDetail-contentWrap">
+    <div class="productDetail-content pt20 tc pb20" style="display: block;">
+      <p class="mt20 mb20"><%= @product.description %></p>
+    </div>
+    <div class="productDetail-content pt30 tc pb20">
+      <ul class="commentList mt70">
+        <% @posts.each do |post| %>
+        <li class="commentList-item w700 pt10 pb10 bc clearfix">
+          <p class="fl content tl f12"><%= post.content %></p>
+          <p class="fr name ell">
+            <%= post.user.email %>
+          </p>
+        </li>
+        <% end %>
+      </ul>
+      <p class="comment-say mt20 mb20">
+        <%= link_to("我来说两句", new_product_post_path(@product),
+             :class => "g-btn pl15 pr15 mt20 ml20 tc col-red f20 bg-red bc") %>
+      </p>
+    </div>
+  </div>

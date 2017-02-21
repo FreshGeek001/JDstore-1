@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post :add_to_cart
       get  :search
     end
+    resources :posts
   end
 
   namespace :admin do
@@ -43,5 +44,4 @@ Rails.application.routes.draw do
   resources :search
 
   root 'welcome#index'
-
 end
