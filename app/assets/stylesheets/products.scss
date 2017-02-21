@@ -216,6 +216,7 @@
 
 .productDetail-tabList {
   border-bottom: 1px solid #D8D8D8;
+  padding-left: 0;
 }
 
 .bg-gray {
@@ -224,17 +225,6 @@
 
 .clearfix {
   display: block;
-}
-
-ol,
-ul {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-ol,
-ul {
-  list-style: none;
 }
 
 .productDetail-tabList-tab {
