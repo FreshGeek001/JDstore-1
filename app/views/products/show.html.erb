@@ -66,7 +66,7 @@
         <div class="productDetail-introImg">
           <% if @prints.present? %>
           <% @prints.each_with_index do |p, index| %>
-          <%= image_tag p.avatar.medium.url %>
+          <%= image_tag p.avatar.medium.url%>
           <% end %>
         <% else %>
           <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>

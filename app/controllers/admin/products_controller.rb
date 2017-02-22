@@ -38,27 +38,23 @@ class Admin::ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    if !params[:photos].nil?
-      !params[:prints].nil?
+    unless params[:photos].nil?
       @product.photos.destroy_all # need to destroy old pics first
-      @product.prints.destroy_all # need to destroy old pics first
       params[:photos]['avatar'].each do |a|
         @picture = @product.photos.create(avatar: a)
       end
+    end
 
-      params[:photos]['avatar'].each do |a|
+    unless params[:prints].nil?
+      @product.prints.destroy_all # need to destroy old pics first
+      params[:prints]['avatar'].each do |a|
         @picture = @product.prints.create(avatar: a)
       end
-
-      @product.update(product_params)
-      redirect_to admin_products_path
-
-    elsif @product.update(product_params)
-      redirect_to admin_products_path
-    else
-      render :edit
     end
-  end
+
+    @product.update(product_params)
+    redirect_to admin_products_path
+    end
 
   def destroy
     @product = Product.find(params[:id])
