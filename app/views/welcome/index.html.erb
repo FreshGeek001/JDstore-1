@@ -1,268 +1,164 @@
+<!--banner start-->
+<div class="banner">
 
-<div class="header">
-  <div class="headerContent">
-    <div class="headerContent-item headerContent-item1 bg-color1"></div>
-    <div class="headerContent-item headerContent-item2 bg-color2"></div>
-    <div class="headerContent-item headerContent-item3 bg-color3"></div>
-  </div>
-</div>
+  <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
 
-<div class="menu bg-color1">
-  <div class="menuList">
-    <div class="menuList-item bg-color2"></div>
-    <div class="menuList-item bg-color3"></div>
-    <div class="menuList-item bg-color4"></div>
-    <div class="menuList-item bg-color5"></div>
-  </div>
-</div>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+      <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+      <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+    </ol>
 
-<div class="carousel bg-color1"></div>
+    <!-- Wrapper For Slides -->
+    <div class="carousel-inner" role="listbox">
 
+      <!-- Third Slide -->
+      <div class="item active">
 
-<div class="orderList bg-color1">
-  <div class="orderList-item bg-color2"></div>
-  <div class="orderList-item bg-color3"></div>
-  <div class="orderList-item bg-color4"></div>
-  <div class="orderList-item bg-color5"></div>
-</div>
+        <!-- Slide Background -->
+        <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcs06qcvqlj31kw11xb29.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
+        <div class="bs-slider-overlay"></div>
 
-<div class="productList">
-  <div class="productList-item bg-color1"></div>
-  <div class="productList-item bg-color2"></div>
-  <div class="productList-item bg-color3"></div>
-  <div class="productList-item bg-color4"></div>
-  <div class="productList-item bg-color5 productList-lastItem"></div>
-  <div class="productList-item bg-color1"></div>
-  <div class="productList-item bg-color2"></div>
-  <div class="productList-item bg-color3"></div>
-  <div class="productList-item bg-color4"></div>
-  <div class="productList-item bg-color5 productList-lastItem"></div>
-</div>
-
-<div class="footer bg-color1"></div>
-
-
-
-
-
-
-
-<!-- Add this css File in head tag-->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
-
-<!--
-        If you want to change #bootstrap-touch-slider id then you have to change Carousel-indicators and Carousel-Control  #bootstrap-touch-slider slide as well
-        Slide effect: slide, fade
-        Text Align: slide_style_center, slide_style_left, slide_style_right
-        Add Text Animation: https://daneden.github.io/animate.css/
-        -->
-
-<div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
-
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-    <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-    <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper For Slides -->
-  <div class="carousel-inner" role="listbox">
-
-    <!-- Third Slide -->
-    <div class="item active">
-
-      <!-- Slide Background -->
-      <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcs06qcvqlj31kw11xb29.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-      <div class="bs-slider-overlay"></div>
-
-      <div class="container">
-        <div class="row">
-          <!-- Slide Text Layer -->
-          <div class="slide-text slide_style_left">
-            <h1 data-animation="animated zoomInRight">Cross the city</h1>
-            <p data-animation="animated fadeInLeft">
-              <i class="fa fa-bicycle" aria-hidden="true"></i>
-              By Bike</p>
-            <%= link_to("Sign up", new_user_registration_path,class:"btn btn-default")%>
-            <%= link_to("Log in", new_user_session_path, class:"btn btn-primary")%>
+        <div class="container">
+          <div class="row">
+            <!-- Slide Text Layer -->
+            <div class="slide-text slide_style_left">
+              <h1 data-animation="animated zoomInRight">Cross the city</h1>
+              <p data-animation="animated fadeInLeft">
+                <i class="fa fa-bicycle" aria-hidden="true"></i>
+                By Bike</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End of Slide -->
+      <!-- End of Slide -->
 
-    <!-- Second Slide -->
-    <div class="item">
+      <!-- Second Slide -->
+      <div class="item">
 
-      <!-- Slide Background -->
-      <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcs0cjxic4j30ku0dhqf8.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-      <div class="bs-slider-overlay"></div>
-      <!-- Slide Text Layer -->
-      <div class="slide-text slide_style_center">
-        <h1 data-animation="animated flipInX">Cross the mountain</h1>
-        <p data-animation="animated lightSpeedIn">
-          <i class="fa fa-bicycle" aria-hidden="true"></i>
-          By Bike</p>
-        <%= link_to("Sign up", new_user_registration_path,class:"btn btn-default")%>
-        <%= link_to("Log in", new_user_session_path, class:"btn btn-primary")%>
+        <!-- Slide Background -->
+        <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcs0cjxic4j30ku0dhqf8.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
+        <div class="bs-slider-overlay"></div>
+        <!-- Slide Text Layer -->
+        <div class="slide-text slide_style_center">
+          <h1 data-animation="animated flipInX">Cross the mountain</h1>
+          <p data-animation="animated lightSpeedIn">
+            <i class="fa fa-bicycle" aria-hidden="true"></i>
+            By Bike</p>
+        </div>
       </div>
-    </div>
-    <!-- End of Slide -->
+      <!-- End of Slide -->
 
-    <!-- Third Slide -->
-    <div class="item">
+      <!-- Third Slide -->
+      <div class="item">
 
-      <!-- Slide Background -->
-      <img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fcof196ys8j31kw11s4qq.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-      <div class="bs-slider-overlay"></div>
-      <!-- Slide Text Layer -->
-      <div class="slide-text slide_style_right">
-        <h1 data-animation="animated zoomInLeft">Cross the world</h1>
-        <p data-animation="animated fadeInRight">
-          <i class="fa fa-bicycle" aria-hidden="true"></i>
-          By Bike</p>
-        <%= link_to("Sign up", new_user_registration_path,class:"btn btn-default")%>
-        <%= link_to("Log in", new_user_session_path, class:"btn btn-primary")%>
+        <!-- Slide Background -->
+        <img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fcof196ys8j31kw11s4qq.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
+        <div class="bs-slider-overlay"></div>
+        <!-- Slide Text Layer -->
+        <div class="slide-text slide_style_right">
+          <h1 data-animation="animated zoomInLeft">Cross the world</h1>
+          <p data-animation="animated fadeInRight">
+            <i class="fa fa-bicycle" aria-hidden="true"></i>
+            By Bike</p>
+        </div>
       </div>
+      <!-- End of Slide -->
+
     </div>
-    <!-- End of Slide -->
+    <!-- End of Wrapper For Slides -->
+
+    <!-- Left Control -->
+    <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+      <span class="fa fa-angle-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <!-- Right Control -->
+    <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+      <span class="fa fa-angle-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 
   </div>
-  <!-- End of Wrapper For Slides -->
+  <!-- End  bootstrap-touch-slider Slider -->
 
-  <!-- Left Control -->
-  <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
-    <span class="fa fa-angle-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
 
-  <!-- Right Control -->
-  <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
-    <span class="fa fa-angle-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+
 
 </div>
-<!-- End  bootstrap-touch-slider Slider -->
-
-<div>
-  <%= form_tag products_path, :method => "get" do %>
-  <div class="searchform">
-    <%= text_field_tag :search, params[:search], placeholder: "Search Product", class: "searchbox"%>
-    <span>
-      <%= submit_tag "搜索", :title => nil, :description => nil, :categories =>nil, class: "searchbutton" %>
-    </span>
-  </div>
-  <% end %>
+<!--banner end-->
+<!-- start-->
+<div class="sn_section">
+    <div class="g-row">
+        <div class="m-cate">
+            <header class="hd">
+                <div class="left">
+                    <h3 class="name">Radon </h3>
+                    <small class="frontName">ZR Team 7.0</small>
+                </div>
+                <div class="right">
+                    <a class="moreItems" href="/" target="_blank">>></a>
+                </div>
+            </header>
+            <div class="bd">
+                <div class="sn_list">
+                    <a class="sn_item first large " href="products/1" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_6.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                    <a class="sn_item large middle " href="products/2" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_12.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                    <a class="sn_item small " href="products/3" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bSnip20170222_14.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                    <a class="sn_item small last" href="products/4" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_5.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="container">
-  <ul class="nav nav-tabs">
-    <li class="active">
-      <a href="/products">Bikes</a>
-    </li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
-        <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li>
-          <a href="#">Submenu 1-1</a>
-        </li>
-        <li>
-          <a href="#">Submenu 1-2</a>
-        </li>
-        <li>
-          <a href="#">Submenu 1-3</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">Menu 2</a>
-    </li>
-    <li>
-      <a href="#">Menu 3</a>
-    </li>
-  </ul>
+<!-- end-->
+
+<!--new start-->
+<div class="m-newCates">
+    <div class="g-row">
+        <div class="m-newCate">
+            <header class="hd">
+                <div class="left">
+                    <h3 class="name">NEW</h3>
+                    <small class="frontName">Popu2.0</small>
+                </div>
+                <div class="right">
+                    <a class="getMore" href="/" target="_blank">>></a>
+                </div>
+            </header>
+            <div class="bd">
+                <ul class="itemList">
+                    <% @products.each do |product| %>
+                        <li class="item">
+                            <div class="m-product j-product">
+                                <div class="hd">
+                                    <!-- <a href="/" title="" target="_blank">
+                                        <img src="https://ww1.sinaimg.cn/large/006tKfTcly1fcse3jvzcij30bo0boaar.jpg" alt="" class="j-lazyload img-lazyload img img-lazyloaded">
+                                    </a> -->
+                                    <%= link_to product_path(product) do %>
+                                        <% if product.image.present? %>
+                                            <%= image_tag(product.image.medium.url, class: "j-lazyload img-lazyload img img-lazyloaded") %>
+                                        <% else %>
+                                            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "j-lazyload img-lazyload img img-lazyloaded") %>
+                                        <% end %>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<section>
-  <h3>GIANT</h3>
-  <div class="container-fluid">
-    <% if  @products.present? %>
-    <% @products.order('created_at DESC').each do |product| %>
-    <% if  true == product.categories.eql?("Giant")%>
-    <div class="col-xs-6 col-md-3">
-      <div id="item">
-        <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-        <%= image_tag(product.image.thumb.url, size: "200x200")%>
-      <% else %>
-        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
-        <% end %>
-        <% end %>
-        <br><br>
-        <%= product.title %>
-        <br>
-        ￥<%= product.price %>
-      </div>
-    </div>
-    <% end %>
-    <% end %>
-    <% end %>
-  </div>
-</section>
-
-<section>
-  <h3>TREK</h3>
-  <div class="container-fluid">
-    <% if  @products.present? %>
-    <% @products.order('created_at DESC').each do |product| %>
-    <% if  true == product.categories.eql?("Trek")%>
-    <div class="col-xs-6 col-md-3">
-      <div id="item">
-        <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-        <%= image_tag(product.image.thumb.url, size: "200x200")%>
-      <% else %>
-        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
-        <% end %>
-        <% end %>
-        <br><br>
-        <%= product.title %>
-        <br>
-        ￥<%= product.price %>
-      </div>
-    </div>
-    <% end %>
-    <% end %>
-    <% end %>
-  </div>
-</section>
-
-<section>
-  <h3>DECATHLON</h3>
-  <div class="container-fluid">
-    <% if  @products.present? %>
-    <% @products.order('created_at DESC').each do |product| %>
-    <% if  true == product.categories.eql?("DECATHLON")%>
-    <div class="col-xs-6 col-md-3">
-      <div id="item">
-        <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-        <%= image_tag(product.image.thumb.url, size: "200x200")%>
-      <% else %>
-        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
-        <% end %>
-        <% end %>
-        <br><br>
-        <%= product.title %>
-        <br>
-        ￥<%= product.price %>
-      </div>
-    </div>
-    <% end %>
-    <% end %>
-    <% end %>
-  </div>
-</section>
+<!--new end-->
