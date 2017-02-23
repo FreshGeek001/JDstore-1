@@ -16,6 +16,7 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
+//= require bootstrap/modal
 //= require_tree .
 
 /*Bootstrap Carousel Touch Slider.
