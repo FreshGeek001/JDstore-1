@@ -107,13 +107,13 @@
                     <a class="sn_item first large " href="products/1" target="_blank">
                         <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_6.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
                     </a>
-                    <a class="sn_item large middle " href="products/2" target="_blank">
+                    <a class="sn_item large middle " href="products/1" target="_blank">
                         <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_12.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
                     </a>
-                    <a class="sn_item small " href="products/3" target="_blank">
+                    <a class="sn_item small " href="products/1" target="_blank">
                         <img src="http://olpdlkuet.bkt.clouddn.com/bSnip20170222_14.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
                     </a>
-                    <a class="sn_item small last" href="products/4" target="_blank">
+                    <a class="sn_item small last" href="products/1" target="_blank">
                         <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_5.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
                     </a>
                 </div>
@@ -123,42 +123,36 @@
 </div>
 <!-- end-->
 
-<!--new start-->
-<div class="m-newCates">
+<!-- start-->
+<div class="sn_section">
     <div class="g-row">
-        <div class="m-newCate">
+        <div class="m-cate">
             <header class="hd">
                 <div class="left">
-                    <h3 class="name">NEW</h3>
-                    <small class="frontName">Popu2.0</small>
+                    <h3 class="name">TREK </h3>
+                    <small class="frontName">TREK 2.0</small>
                 </div>
                 <div class="right">
-                    <a class="getMore" href="/" target="_blank">>></a>
+                    <a class="moreItems" href="/" target="_blank">>></a>
                 </div>
             </header>
             <div class="bd">
-                <ul class="itemList">
-                    <% @products.each do |product| %>
-                        <li class="item">
-                            <div class="m-product j-product">
-                                <div class="hd">
-                                    <!-- <a href="/" title="" target="_blank">
-                                        <img src="https://ww1.sinaimg.cn/large/006tKfTcly1fcse3jvzcij30bo0boaar.jpg" alt="" class="j-lazyload img-lazyload img img-lazyloaded">
-                                    </a> -->
-                                    <%= link_to product_path(product) do %>
-                                        <% if product.image.present? %>
-                                            <%= image_tag(product.image.medium.url, class: "j-lazyload img-lazyload img img-lazyloaded") %>
-                                        <% else %>
-                                            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "j-lazyload img-lazyload img img-lazyloaded") %>
-                                        <% end %>
-                                    <% end %>
-                                </div>
-                            </div>
-                        </li>
-                    <% end %>
-                </ul>
+                <div class="sn_list">
+                    <a class="sn_item first large " href="products/2" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/radonSnip20170223_52.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                    <a class="sn_item large middle " href="products/2" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/Snip20170223_57.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                    <a class="sn_item small " href="products/2" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/radonSnip20170223_53.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                    <a class="sn_item small last" href="products/2" target="_blank">
+                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/radonSnip20170223_54.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!--new end-->
+<!-- end-->
