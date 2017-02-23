@@ -7,4 +7,6 @@ end
   has_many :photos
   accepts_nested_attributes_for :photos
   has_many :posts
+  has_many :prints
+  accepts_nested_attributes_for :prints
 end

@@ -35,6 +35,3 @@ Credits: Bootstrap, jQuery, TouchSwipe, Animate.css, FontAwesome
 // Curently there are no option available.
 
 $('#bootstrap-touch-slider').bsTouchSlider();
-
-
-    
