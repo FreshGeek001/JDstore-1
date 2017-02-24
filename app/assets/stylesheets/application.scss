@@ -369,7 +369,7 @@ i {
 }
 
 .g-row {
-  width: 1090px;
+  width: 1116px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
@@ -454,7 +454,7 @@ i {
 }
 
 .m-cate > .bd {
-  width: 1090px;
+  width: 1116px;
   overflow: hidden;
 }
 
@@ -484,7 +484,7 @@ i {
 }
 
 .sn_section .sn_list .sn_item {
-  width: 357px;
+  width: 270px;
   float: left;
   margin-left: 10px;
   overflow: hidden;
@@ -526,33 +526,13 @@ i {
   height: 320px;
 }
 
+.sn_section .sn_list .sn_item.mountain {
+  height: 320px;
+  width: 550px;
+}
+
 .sn_section .sn_list .sn_item.large.middle {
-  width: 357px;
   margin-left: 9px !important;
-}
-
-.sn_section .sn_list .sn_item.small {
-  height: 155px;
-}
-
-.sn_section .sn_list .sn_item.small .name {
-  font-size: 20px;
-  margin: 32px 0 10px 20px;
-  text-align: left;
-}
-
-.sn_section .sn_list .sn_item.small .price {
-  padding-top: 10px;
-  margin-left: 20px;
-  float: left;
-}
-
-.sn_section .sn_list .sn_item.small .newShelfTag {
-  margin-left: 5px;
-}
-
-.sn_section .sn_list .sn_item.small.last {
-  margin-top: 10px;
 }
 
 .sn_section .right {
