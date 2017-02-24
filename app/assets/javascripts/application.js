@@ -36,3 +36,10 @@ Credits: Bootstrap, jQuery, TouchSwipe, Animate.css, FontAwesome
 // Curently there are no option available.
 
 $('#bootstrap-touch-slider').bsTouchSlider();
+
+
+$(document).ready(function() {
+    $('#Carousel').carousel({
+        interval: 5000
+    })
+});

@@ -1,158 +1,209 @@
-<!--banner start-->
-<div class="banner">
+<head>
+  <style>
+    .carousel {
+      margin-bottom: 0;
+      padding: 0 40px 30px;
+    }
+    /* The controlsy */
+    .carousel-control {
+      left: -12px;
+      height: 40px;
+      width: 40px;
+      background: none repeat scroll 0 0 #222222;
+      border: 4px solid #FFFFFF;
+      border-radius: 23px 23px 23px 23px;
+      margin-top: 90px;
+    }
+    .carousel-control.right {
+      right: -12px;
+    }
 
-  <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
+    /* The colour of the indicators */
+    .carousel-indicators li {
+      background: #cecece;
+    }
+    .carousel-indicators .active {
+      background: #428bca;
+    }
 
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-      <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-      <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-    </ol>
+    .module-name {
+      margin-top: 45px;
+      margin-bottom: 30px;
+      color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      font-size: 0;
+    }
+    .module-name.decorative i {
+      display: inline-block;
+      vertical-align: middle;
+      width: 95px;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.7);
+      margin-right: 20px;
+    }
+    .module-name.decorative span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 30px;
+    }
 
-    <!-- Wrapper For Slides -->
-    <div class="carousel-inner" role="listbox">
+  </style>
+</head>
 
-      <!-- Third Slide -->
-      <div class="item active">
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
 
-        <!-- Slide Background -->
-        <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcs06qcvqlj31kw11xb29.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-        <div class="bs-slider-overlay"></div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+  </ol>
 
-        <div class="container">
-          <div class="row">
-            <!-- Slide Text Layer -->
-            <div class="slide-text slide_style_left">
-              <h1 data-animation="animated zoomInRight">Cross the city</h1>
-              <p data-animation="animated fadeInLeft">
-                <i class="fa fa-bicycle" aria-hidden="true"></i>
-                By Bike</p>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+          <h1>cross the city</h1><br>
+          <h2>
+            <i class="fa fa-bicycle" aria-hidden="true"></i>by bike
+          </h2>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">road bike</button>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">
+        <hgroup>
+          <h1>cross the mountain</h1>
+          <h2>
+            <i class="fa fa-bicycle" aria-hidden="true"></i>by bike
+          </h2>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">mauntain bike</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" style="margin-top:20px;">
+    <div class="col-md-12">
+      <div class="module-name decorative">
+        <i></i>
+        <span>精选商品</span>
+        <i style="margin-left: 20px;"></i>
+      </div>
+      <div id="Carousel" class="carousel slide">
+
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <div class="row">
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fd1l0q7ms8j30by0bymxu.jpg" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fd1l02iex8j30by0bywf2.jpg" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fd1l10cd15j30by0byaao.jpg" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fd1l5l2eshj30by0byq3j.jpg" alt="Image" style="max-width:100%;"></a>
+              </div>
             </div>
+            <!--.row-->
           </div>
+          <!--.item-->
+
+          <div class="item">
+            <div class="row">
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+            </div>
+            <!--.row-->
+          </div>
+          <!--.item-->
+
+          <div class="item">
+            <div class="row">
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a>
+              </div>
+            </div>
+            <!--.row-->
+          </div>
+          <!--.item-->
+
         </div>
+        <!--.carousel-inner-->
+        <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
       </div>
-      <!-- End of Slide -->
-
-      <!-- Second Slide -->
-      <div class="item">
-
-        <!-- Slide Background -->
-        <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcs0cjxic4j30ku0dhqf8.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-        <div class="bs-slider-overlay"></div>
-        <!-- Slide Text Layer -->
-        <div class="slide-text slide_style_center">
-          <h1 data-animation="animated flipInX">Cross the mountain</h1>
-          <p data-animation="animated lightSpeedIn">
-            <i class="fa fa-bicycle" aria-hidden="true"></i>
-            By Bike</p>
-        </div>
-      </div>
-      <!-- End of Slide -->
-
-      <!-- Third Slide -->
-      <div class="item">
-
-        <!-- Slide Background -->
-        <img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fcof196ys8j31kw11s4qq.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-        <div class="bs-slider-overlay"></div>
-        <!-- Slide Text Layer -->
-        <div class="slide-text slide_style_right">
-          <h1 data-animation="animated zoomInLeft">Cross the world</h1>
-          <p data-animation="animated fadeInRight">
-            <i class="fa fa-bicycle" aria-hidden="true"></i>
-            By Bike</p>
-        </div>
-      </div>
-      <!-- End of Slide -->
+      <!--.Carousel-->
 
     </div>
-    <!-- End of Wrapper For Slides -->
-
-    <!-- Left Control -->
-    <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
-      <span class="fa fa-angle-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-
-    <!-- Right Control -->
-    <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
-      <span class="fa fa-angle-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-
   </div>
-  <!-- End  bootstrap-touch-slider Slider -->
-
-
-
-
 </div>
-<!--banner end-->
+<!--.container-->
+
 <!-- start-->
 <div class="sn_section">
-    <div class="g-row">
-        <div class="m-cate">
-            <header class="hd">
-                <div class="left">
-                    <h3 class="name">Radon </h3>
-                    <small class="frontName">ZR Team 7.0</small>
-                </div>
-                <div class="right">
-                    <a class="moreItems" href="/" target="_blank">>></a>
-                </div>
-            </header>
-            <div class="bd">
-                <div class="sn_list">
-                    <a class="sn_item first large " href="products/1" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_6.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                    <a class="sn_item large middle " href="products/1" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_12.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                    <a class="sn_item small " href="products/1" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bSnip20170222_14.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                    <a class="sn_item small last" href="products/1" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_5.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                </div>
-            </div>
+  <div class="g-row">
+    <div class="m-cate">
+      <header class="hd">
+        <div class="left">
+          <h3 class="name">公路竞速
+          </h3>
+          <small class="frontName"></small>
         </div>
+        <div class="right">
+          <a class="moreItems" href="products/">>></a>
+        </div>
+      </header>
+      <div class="bd">
+        <div class="sn_list">
+          <a class="sn_item first large " href="products/">
+            <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fd1houqtoxj30p00ukq5n.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+          </a>
+          <a class="sn_item large middle " href="products/">
+            <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_12.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+          </a>
+          <a class="sn_item small " href="products/">
+            <img src="http://olpdlkuet.bkt.clouddn.com/bSnip20170222_14.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+          </a>
+          <a class="sn_item small last" href="products/">
+            <img src="http://olpdlkuet.bkt.clouddn.com/bybike/GIANTSnip20170222_5.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <!-- end-->
 
-<!-- start-->
-<div class="sn_section">
-    <div class="g-row">
-        <div class="m-cate">
-            <header class="hd">
-                <div class="left">
-                    <h3 class="name">TREK </h3>
-                    <small class="frontName">TREK 2.0</small>
-                </div>
-                <div class="right">
-                    <a class="moreItems" href="/" target="_blank">>></a>
-                </div>
-            </header>
-            <div class="bd">
-                <div class="sn_list">
-                    <a class="sn_item first large " href="products/2" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/radonSnip20170223_52.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                    <a class="sn_item large middle " href="products/2" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/Snip20170223_57.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                    <a class="sn_item small " href="products/2" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/radonSnip20170223_53.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                    <a class="sn_item small last" href="products/2" target="_blank">
-                        <img src="http://olpdlkuet.bkt.clouddn.com/bybike/radonSnip20170223_54.png" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- end-->

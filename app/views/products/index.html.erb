@@ -1,4 +1,4 @@
-<div class="container dad">
+<div class="container">
 
   <div>
     <%= form_tag products_path, :method => "get" do %>
@@ -10,35 +10,7 @@
     </div>
     <% end %>
   </div>
-  <div class="container">
-    <ul class="nav nav-tabs" style="margin:20px;">
-      <li class="active">
-        <a href="/products">Bikes</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Submenu 1-1</a>
-          </li>
-          <li>
-            <a href="#">Submenu 1-2</a>
-          </li>
-          <li>
-            <a href="#">Submenu 1-3</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Menu 2</a>
-      </li>
-      <li>
-        <a href="#">Menu 3</a>
-      </li>
-    </ul>
-  </div>
+
   <div class="row">
     <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
