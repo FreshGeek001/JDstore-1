@@ -11,6 +11,16 @@ class ProductsController < ApplicationController
     @prints = @product.prints.all
   end
 
+  def road
+    @products = Product.where(categories: "公路车" )
+    # @products = Product.all
+  end
+
+  def mountain
+    @products = Product.where(categories: "山地车" )
+    # @products = Product.all
+  end
+
   def add_to_cart
     @product = Product.find(params[:id])
     if !current_cart.products.include?(@product)

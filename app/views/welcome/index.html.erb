@@ -26,6 +26,13 @@
       background: #428bca;
     }
 
+    .hero a{
+      z-index: 999;
+      width: 200px;
+      height: 200px;
+      display: block;
+    }
+
     .module-name {
       margin-top: 45px;
       margin-bottom: 30px;
@@ -68,7 +75,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#bs-carousel" data-slide-to="1"></li>
+      <li data-target="#bs-carousel" data-slide-to="1"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -82,9 +89,12 @@
             <i class="fa fa-bicycle" aria-hidden="true"></i>by bike
           </h2>
         </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">road bike</button>
+        <button class="btn btn-hero btn-lg" role="button"><a href="http://google.com">road bike</a></button>
+        <!-- <a class="btn btn-hero btn-lg" href="http://google.com">Test</a> -->
+        <%#= link_to "road bike", products_path, class: "btn btn-hero btn-lg" %>
       </div>
     </div>
+
     <div class="item slides">
       <div class="slide-2"></div>
       <div class="hero">
@@ -178,16 +188,16 @@
       </header>
       <div class="bd">
         <div class="sn_list" style="margin-top:20px;">
-          <a class="sn_item first large " href="products/">
+          <a class="sn_item first large " href="products/road/">
             <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fd1houqtoxj30p00ukq5n.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
           </a>
-          <a class="sn_item large middle " href="products/">
+          <a class="sn_item large middle " href="products/road/">
             <img src="https://ww3.sinaimg.cn/large/006tNc79gy1fd1tnur9gwj30p00ukn1a.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
           </a>
-          <a class="sn_item large last" href="products/">
+          <a class="sn_item large last" href="products/road/">
             <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fd1tolz7u5j30p00ukq5q.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
           </a>
-          <a class="sn_item large last" href="products/">
+          <a class="sn_item large last" href="products/road/">
             <img src="https://ww4.sinaimg.cn/large/006tNc79gy1fd1u72326xj30m80rsgrt.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
           </a>
 
@@ -210,10 +220,10 @@
       </header>
       <div class="bd">
         <div class="sn_list" style="margin-top:20px;">
-          <a class="sn_item mountain " href="products/" style="margin-left:-10px;margin-right:10px;">
+          <a class="sn_item mountain " href="products/mountain/" style="margin-left:-10px;margin-right:10px;">
             <img src="https://ww4.sinaimg.cn/large/006tNc79gy1fd1uvjmj81j31kw0w01kz.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
           </a>
-          <a class="sn_item mountain " href="products/">
+          <a class="sn_item mountain " href="products/mountain/">
             <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fd1uli3fnzj31kw0w2b2b.jpg" data-original="" alt="" class="j-lazyload img-lazyload img img-noBgPic img-lazyloaded">
           </a>
 
