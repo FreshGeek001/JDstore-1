@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :products do
+    collection do
+      get :road
+      get :mountain
+    end
     member do
       post :add_to_cart
       get  :search
