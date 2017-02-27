@@ -1,3 +1,16 @@
+<head>
+  <style>
+    .panel {
+      border: 1px solid rgb(89, 253, 5);
+      border-radius: 0;
+      transition: box-shadow 0.5s;
+    }
+    .panel:hover {
+      box-shadow: 5px 0 40px rgba(0,0,0, .2);
+    }
+
+  </style>
+</head>
 <div class="container center1090">
 
   <div>
@@ -14,16 +27,27 @@
   <div class="row">
     <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
-      <%= link_to product_path(product) do %>
-      <% if product.photos.present? %>
-      <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-      <% end %>
-      <% end %>
-      <%= product.title %>
-      ￥<%= product.price %>
+      <div class="panel panel-primary text-center">
+        <div class="panel-body">
+          <%= link_to product_path(product) do %>
+          <% if product.photos.present? %>
+          <%= image_tag(product.photos[0].avatar.thumb.url) %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail")%>
+          <% end %>
+          <% end %>
+          <hr>
+          <%= product.title %>
+          ￥<%= product.price %></br>
+        <button class="btn btn-hero">
+          <%= link_to add_to_cart_product_path(product), :method => :post do %>
+          Add to cart
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          <% end %>
+        </button>
+      </div>
     </div>
-    <% end %>
   </div>
+  <% end %>
+</div>
 </div>
