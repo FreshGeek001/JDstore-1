@@ -1,33 +1,29 @@
 <div class="favorites-index">
   <h1>Favorite Products</h1>
-  <% Product.all.each do |product| %>
-  <div class="col-md-6 col-sm-12">
-    <figure class="snip1423">
-      <%= link_to product_path(product) do %>
-      <% if product.photos.present? %>
-      <%= image_tag(product.photos[0].image.url) %>
-    <% else %>
-      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-      <% end %>
-      <% end %>
-      <figcaption>
-        <h3><%= link_to(product.title, product_path(product)) %>
-          <span>￥<%= product.price %></span>
-        </h3>
-        <p>
-          已成交多少单
-          <% if product.quantity.present? && product.quantity > 0 %>
-          <%= link_to(content_tag(:i, "", class: "fa fa-shopping-cart fa-2x"), add_to_cart_product_path(product), :method => :post) %>
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-primary text-center">
+        <div class="panel-body">
+          <%= link_to product_path(product) do %>
+          <% if product.photos.present? %>
+          <%= image_tag(product.photos[0].avatar.thumb.url) %>
         <% else %>
-          已售馨
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail")%>
           <% end %>
-          <i class="sub">2</i>
-          <i class="fa fa-heart-o fa-2x">
-            <a></a>
-          </i>
-        </p>
-      </figcaption>
-    </figure>
+          <% end %>
+          <hr>
+          <%= product.title %>
+          ￥<%= product.price %></br>
+        <button class="btn btn-hero">
+          <%= link_to add_to_cart_product_path(product), :method => :post do %>
+          Add to cart
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          <% end %>
+        </button>
+      </div>
+    </div>
   </div>
   <% end %>
+</div>
 </div>
