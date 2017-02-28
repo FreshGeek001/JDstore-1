@@ -10,4 +10,9 @@ class User < ApplicationRecord
 
   has_many :orders
   has_many :posts
+  has_many :favorites
+  has_many :favorite_products, through: :favorites, source: :product
+  def is_fan_of?(group)
+    favorite_products.include?(group)
+  end
 end
