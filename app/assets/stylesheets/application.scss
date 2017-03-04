@@ -18,10 +18,10 @@
 @import "font-awesome";
 
 .navbar-default {
-  background-color: #fff; //背景颜色
-  border-color: #fff; //边框色
+  background-color: rgb(245,245,245); //背景颜色
+  border-color: rgb(245,245,245); //边框色
   margin-bottom: 0; //底部 margin 不撑开距离
-  width: 1090px;
+  width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -139,8 +139,10 @@
   transition: transform 1s, -webkit-transform 1s;
 }
 
-.sn_section .sn_list .sn_item.first {
+.sn_section .sn_list .sn_item.road {
   margin-left: 0;
+  width: 550px;
+  height: 320px;
 }
 
 .sn_section .sn_list .sn_item .img {
@@ -159,18 +161,16 @@
   z-index: 1;
 }
 
-.sn_section .sn_list .sn_item.large {
-  height: 320px;
-}
-
 .sn_section .sn_list .sn_item.mountain {
+  float: right;
   height: 320px;
   width: 550px;
 }
 
 .sn_section .sn_list .sn_item.BMX {
-  height: 160px;
-  width: 1116px;
+  margin-left: 0;
+  width: 550px;
+  height: 320px;
 }
 
 .sn_section .sn_list .sn_item.large.middle {

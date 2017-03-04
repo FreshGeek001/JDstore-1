@@ -5,13 +5,18 @@ Rails.application.routes.draw do
     collection do
       get :road
       get :mountain
+      get :bmx
     end
     member do
       post :add_to_cart
       get  :search
+      post :favorite
+      post :unfavorite
     end
     resources :posts
   end
+
+  resources :favorites
 
   namespace :admin do
     resources :products

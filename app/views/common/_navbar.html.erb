@@ -12,20 +12,20 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">选购
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <%= link_to("All", products_path)%>
+              <%= link_to("全部", products_path)%>
             </li>
             <li>
-              <%= link_to("Road", road_products_path)%>
+              <%= link_to("公路", road_products_path)%>
             </li>
             <li>
-              <%= link_to("mountain", mountain_products_path)%>
+              <%= link_to("山地", mountain_products_path)%>
             </li>
             <li>
-              <%= link_to("BTX","#")%>
+              <%= link_to("小轮", bmx_products_path)%>
             </li>
           </ul>
         </li>
@@ -57,6 +57,9 @@
             <% if current_user.admin? %>
             <li><%= link_to(content_tag(:i, 'Admin 选单', class:'fa fa-home'), admin_products_path )%></li>
             <% end %>
+            <li>
+              <%= link_to(content_tag(:i, " 我的收藏", class: "fa fa-gratipay"), favorites_path ) %>
+            </li>
             <li>
               <%= link_to("个人订单列表", account_orders_path)%>
             </li>

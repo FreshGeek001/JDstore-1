@@ -1,11 +1,36 @@
-<div class="detail mt20 w1200 bc pb50">
+<head>
+  <style>
+    .action {
+      width: 200px;
+    }
+    .bl {
+      float: left;
 
+    }
+    .br {
+      float: right;
+      padding-top: 20px;
+    }
+    .action .unlike {
+      color: #d32048;
+      background-color: #fff;
+      border-color: #d32048;
+      font-size: 25px;
+    }
+    .action .like {
+      color: #fff;
+      background-color: #d32048;
+      border-color: #d32048;
+      font-size: 25px;
+    }
+
+  </style>
+</head>
+<div class="detail mt20 w1200 bc pb50">
   <div class="intro clearfix">
     <div class="cover fl">
       <div class="intro-bigPic border pr">
-
         <% if @photos.present? %>
-
         <img id="thumb" src="<%= @photos.first.avatar.medium.url %>" data-large-img-wrapper="preview" data-large-img-url="<%= @photos.first.avatar.medium.url %>">
 
         <% end %>
@@ -42,12 +67,26 @@
         <span class="pl20 pr30">库存</span><%= @product.quantity %>
         <span></span>
       </p>
-
-      <% if @product.quantity.present? && @product.quantity > 0 %>
-      <%=link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red")%>
-    <% else %>
-      已销售一空，无法购买
-      <% end %>
+      <div class="action">
+        <div class="bl">
+          <% if @product.quantity.present? && @product.quantity > 0 %>
+          <%=link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 tc col-red f20 bg-red")%>
+        <% else %>
+          已销售一空，无法购买
+          <% end %>
+        </div>
+        <div class="br">
+          <% if !current_user.is_fan_of?(@product) %>
+          <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          <% end %>
+        <% else %>
+          <%= link_to unfavorite_product_path(@product), :class => "unlike btn btn-default",method: :post do %>
+          <i class="fa fa-heart" aria-hidden="true" style="color:red;"></i>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -12,13 +12,17 @@ class ProductsController < ApplicationController
   end
 
   def road
-    @products = Product.where(categories: "公路车" )
+    @products = Product.where(categories: '公路车')
     # @products = Product.all
   end
 
   def mountain
-    @products = Product.where(categories: "山地车" )
+    @products = Product.where(categories: '山地车')
     # @products = Product.all
+  end
+
+  def bmx
+    @products = Product.where(categories: 'BMX')
   end
 
   def add_to_cart
@@ -29,6 +33,18 @@ class ProductsController < ApplicationController
     else
       flash[:warning] = '你的购物车已有此物品'
   end
+    redirect_to :back
+  end
+
+  def favorite
+    @product = Product.find(params[:id])
+    current_user.favorite_products << @product
+    redirect_to :back
+   end
+
+  def unfavorite
+    @product = Product.find(params[:id])
+    current_user.favorite_products.delete(@product)
     redirect_to :back
   end
 end
