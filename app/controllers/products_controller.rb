@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: [:favorite, :unfavorite]
   def index
     @products = Product.all
     @products = Product.search(params[:search])
@@ -39,12 +40,15 @@ class ProductsController < ApplicationController
   def favorite
     @product = Product.find(params[:id])
     current_user.favorite_products << @product
+    flash[:notice] = '您已收藏宝贝'
     redirect_to :back
    end
 
   def unfavorite
     @product = Product.find(params[:id])
+
     current_user.favorite_products.delete(@product)
+    flash[:notice] = '您已取消收藏宝贝'
     redirect_to :back
   end
 end
