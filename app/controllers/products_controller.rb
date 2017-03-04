@@ -21,6 +21,10 @@ class ProductsController < ApplicationController
     # @products = Product.all
   end
 
+  def bmx
+    @products = Product.where(categories: 'BMX')
+  end
+
   def add_to_cart
     @product = Product.find(params[:id])
     if !current_cart.products.include?(@product)
