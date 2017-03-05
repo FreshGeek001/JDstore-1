@@ -212,6 +212,8 @@ GEM
       activesupport (>= 4.1.0)
     i18n (0.8.1)
     inflecto (0.0.2)
+    intercom-rails (0.3.4)
+      activesupport (> 3.0)
     ipaddress (0.8.3)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -337,6 +339,7 @@ DEPENDENCIES
   figaro
   fog
   font-awesome-rails
+  intercom-rails
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
