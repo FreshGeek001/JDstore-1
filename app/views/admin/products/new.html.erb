@@ -1,33 +1,33 @@
 <h2>新增产品</h2>
 <%= simple_form_for [:admin,@product] do |f|%>
 <div class="group">
-  <%= f.input :categories %>
+  <%= f.input :categories, label: "分类" %>
 </div>
 <div class="group">
-  <%= f.input :title %>
+  <%= f.input :title, label: "标题"%>
 </div>
 <div class="group">
-  <%= f.input :description%>
+  <%= f.input :description, label: "描述"%>
 </div>
 <div class="group">
-  <%= f.input :quantity%>
+  <%= f.input :quantity, label: "数量"%>
 </div>
 <div class="group">
-  <%= f.input :price%>
+  <%= f.input :price, label: "价格"%>
 </div>
 
 <div class="group">
   <%#= f.input :image, as: :file %>
-  <%= f.label :avatar %><br>
+  <%= f.label :avatar, label: "上传放大图" %><br>
   <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
 </div>
-
+<br>
 <div class="group">
   <%#= f.input :image, as: :file %>
-  <%= f.label :avatar %><br>
+  <%= f.label :avatar, label: "上传详情图" %><br>
   <%= f.file_field :avatar, :multiple => true, name: "prints[avatar][]" %>
 </div>
-
+<br>
 <%= f.submit "Submit", data: { disable_with: "Submiting..."}, class:"btn btn-primary" %>
 
 <% end %>

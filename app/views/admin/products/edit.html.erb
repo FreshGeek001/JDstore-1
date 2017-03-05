@@ -1,23 +1,23 @@
 <h2>编辑商品</h2>
 <%= simple_form_for [:admin,@product] do |f| %>
 <div class="group">
-  <%= f.input :categories %>
+  <%= f.input :categories, label: "分类" %>
 </div>
 <div class="group">
-  <%= f.input :title%>
+  <%= f.input :title, label: "标题"%>
 </div>
 <div class="group">
-  <%= f.input :description %>
+  <%= f.input :description, label: "描述" %>
 </div>
 <div class="group">
-  <%= f.input :quantity %>
+  <%= f.input :quantity, label: "库存" %>
 </div>
 <div class="group">
-  <%= f.input :price %>
+  <%= f.input :price, label: "价格" %>
 </div>
 
 <% if @product.photos.present? %>
-<span>目前商品圖</span>
+<span>目前商品图</span>
 <br>
 <% @product.photos.each do |p| %>
 <%= image_tag p.avatar.thumb.url %><br>
@@ -25,10 +25,10 @@
 <% end %>
 
 <div class="group">
-  <%= f.label :avatar %><br>
+  <%= f.label :avatar, label: "上传放大图" %><br>
   <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
 </div>
-
+<br>
 <% if @product.prints.present? %>
 <span>目前商品详情图</span>
 <br>
@@ -36,11 +36,11 @@
 <%= image_tag p.avatar.thumb.url %><br>
 <% end %>
 <% end %>
-
 <div class="group">
-  <%= f.label :avatar %><br>
+  <%= f.label :avatar, label: "上传详情图" %><br>
   <%= f.file_field :avatar, :multiple => true, name: "prints[avatar][]" %>
 </div>
+<br>
 
 <%= f.submit "Submit", data: { disable_with:"Submiting"}, class:"btn btn-primary" %>
 <% end %>
