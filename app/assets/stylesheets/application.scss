@@ -12,13 +12,24 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "social-share-button";
+// ---- social button ------
+$size: 24px;
 
-
-
+.social-share-button {
+  .ssb-icon {
+    margin-top: 20px;
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+// ---- social button ------
 
 .navbar-default {
   background-color: rgb(245,245,245); //背景颜色
