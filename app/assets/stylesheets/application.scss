@@ -18,6 +18,9 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "social-share-button";
+
+
+
 // ---- social button ------
 $size: 24px;
 
@@ -202,69 +205,13 @@ $size: 24px;
   color: #000;
 }
 /*footer*/
-.footer_siteEnsure {
-  margin-bottom: 30px;
-}
-
-.footer_siteEnsure:after,
-.footer_siteEnsure:before {
-  content: " ";
-  display: table;
-}
-
-.footer_siteEnsure .item {
-  float: left;
-  width: 33.333333%;
+.footer {
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #efefef;
   text-align: center;
 }
 
-.footer_siteEnsure .item .inner {
-  color: #fff;
-  font-size: 18px;
-  line-height: 51px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.footer_siteEnsure .item .inner .icon,
-.footer_siteEnsure .item .inner .text {
-  float: left;
-}
-
-.footer_siteEnsure .item .inner .icon {
-  margin-right: 17px;
-}
-
-.footer_siteEnsure .item .inner .text {
-  text-align: left;
-}
-
-.footer_info {
-  text-align: center;
-  color: #999;
-}
-
-.footer_info .nav {
-  display: inline-block;
-}
-
-.footer_info .nav:after,
-.footer_info .nav:before {
-  content: " ";
-  display: table;
-}
-
-.footer_info .nav:after {
-  clear: both;
-}
-
-.footer_info .nav .text {
-  color: #999;
-}
-
-.footer_info .nav .split {
-  margin: auto 10px;
-}
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 /****** LOGIN MODAL ******/
 .loginmodal-container {
