@@ -17,8 +17,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "social-share-button";
-// ---- social button ------
+@import "social-share-button"; // ---- social button ------
 $size: 24px;
 
 .social-share-button {
@@ -36,7 +35,6 @@ $size: 24px;
   border-color: rgb(245,245,245); //边框色
   margin-bottom: 0; //底部 margin 不撑开距离
   width: 100%;
-  max-width: 1229px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
