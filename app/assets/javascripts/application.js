@@ -19,6 +19,7 @@
 //= require bootstrap/modal
 //= require social-share-button
 //= require social-share-button/wechat
+//= require jquery.raty
 //= require_tree .
 
 /*Bootstrap Carousel Touch Slider.
