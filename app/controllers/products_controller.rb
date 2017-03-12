@@ -10,6 +10,11 @@ class ProductsController < ApplicationController
     @photos = @product.photos.all
     @posts = @product.posts
     @prints = @product.prints.all
+    if @posts.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @posts.average(:rating).round(2)
+    end
   end
 
   def road

@@ -27,6 +27,10 @@
       padding-left: 5px;
       width: 50px;
     }
+    .wfr{
+      width:200px;
+      float:left;
+    }
 
   </style>
 </head>
@@ -81,6 +85,7 @@
       <div class="col-md-4" style="margin-top:-20px;">
         <%= social_share_button_tag(@product.title) %>
       </div>
+
 
       <div class="action">
         <div class="bl">
@@ -143,13 +148,17 @@
       </div>
 
       <div class="productDetail-content pt30 tc pb20">
+      <div class="star-rating" data-score= <%= @avg_rating %> >平均分：</div>
+        <br>
         <ul class="commentList mt70">
           <% @posts.each do |post| %>
           <li class="commentList-item w700 pt10 pb10 bc clearfix">
-            <p class="fl content tl f12"><%= post.content %></p>
-            <p class="fr name ell">
-              <%= post.user.email %>
+            <p class="fl content tl f12">
+              <%= post.content %>
             </p>
+              <div class="star-rating wfr" data-score= <%= post.rating %> ></div>
+              <%= post.user.email %>
+
           </li>
           <% end %>
         </ul>
@@ -163,13 +172,27 @@
 </div>
 
 <script>
-  //show 预览图选择
+//ratyrate
+    $('.star-rating').raty({
+           path: '/images/',
+               readOnly: true,
+               score: function() {
+             return $(this).attr('data-score');
+           }
+     });
+     $('#star-rating').raty({
+     path: '/images/',
+     scoreName: 'post[rating]'
+     });
+
+
+  // 预览图选择
   $(document).on('mouseover', '.intro-preview-item', function () {
     var src = $(this).find('img').attr('src')
     $('.intro-bigPic img').attr('src', src)
     $('#thumb-lens').css('background-image', 'url(' + src + ')')
     $(this).addClass('intro-preview-activeItem').siblings().removeClass('intro-preview-activeItem')
-    m.attach({thumb: '#thumb', large: src, largeWrapper: 'preview'})
+    // m.attach({thumb: '#thumb', large: src, largeWrapper: 'preview'})
   })
 
   $('.intro-preview-activeItem').trigger('mouseover')
@@ -180,5 +203,5 @@
     $('#preview').css('visibility', 'hidden')
   })
 
-  //show
+  //预览图选择
 </script>
